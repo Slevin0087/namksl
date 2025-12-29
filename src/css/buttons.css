@@ -21,7 +21,7 @@
     var(--average-font-size-pbtn),
     var(--max-font-size-pbtn)
   );
-  --border-radius-pbtn: calc(var(--gap-page-buttons-container) / 2)
+  --border-radius-pbtn: calc(var(--gap-page-buttons-container) / 2);
 }
 
 .page-buttons-container {
@@ -31,7 +31,13 @@
   gap: var(--gap-page-buttons-container);
 }
 
-.page-btn {
+.page-btn[type="submit"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.page-btn,
+.page-btn[type="submit"] {
   cursor: pointer;
   color: black;
   background-color: yellow;
