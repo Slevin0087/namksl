@@ -1,0 +1,63 @@
+:root {
+  /* ipc - inputPlayerName-page-content */
+  --min-gap-ipc: 5px;
+  --average-gap-ipc: min(2vh, 2vw);
+  --max-gap-ipc: 3vw;
+  --gap-inputPlayerName-page-content: clamp(
+    var(--min-gap-ipc),
+    var(--average-gap-ipc),
+    var(--max-gap-ipc)
+  );
+  --padding-inputPlayerName-input: var(--gap-inputPlayerName-page-content);
+
+  /* il - inputPlayerName-label */
+  --min-font-size-il: 1rem;
+  --average-font-size-il: min(8vh, 8vw);
+  --max-font-size-il: 9vw;
+  --font-size-inputPlayerName-label: clamp(
+    var(--min-font-size-il),
+    var(--average-font-size-il),
+    var(--max-font-size-il)
+  );
+
+  /* ii - inputPlayerName-input */
+  --min-font-size-ii: 0.5rem;
+  --average-font-size-ii: min(5vh, 5vw);
+  --max-font-size-ii: 6vw;
+  --font-size-inputPlayerName-input: clamp(
+    var(--min-font-size-ii),
+    var(--average-font-size-ii),
+    var(--max-font-size-ii)
+  );
+  --border-radius-ii: calc(var(--gap-inputPlayerName-page-content) / 2);
+}
+
+.inputPlayerName-page {
+  display: flex;
+  background-color: brown;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.inputPlayerName-label {
+  font-size: var(--font-size-inputPlayerName-label);
+  color: black;
+  cursor: pointer;
+}
+
+.inputPlayerName-input {
+  color: black;
+  padding: var(--padding-inputPlayerName-input);
+  border-radius: var(--border-radius-ii);
+  font-size: var(--font-size-inputPlayerName-input);
+}
+
+.inputPlayerName-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap-inputPlayerName-page-content);
+  align-items: center;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <!-- <link rel="manifest" href="/manifest.json" /> -->
+    <link rel="apple-touch-icon" href="./src/assets/icons/ios-512.png" />
+    <title>Хусынка</title>
+    <link
+      rel="shortcut icon"
+      href="./src/assets/icons/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./src/css/main.css" />
+  </head>
+  <body>
+    <!-- Самый главный контейнер: начало -->
+    <div id="app" class="app-container">
+      <div id="inputPlayerName-page" class="inputPlayerName-page hidden">
+        <form id="inputPlayerName-form" class="inputPlayerName-form">
+          <div class="inputPlayerName-content">
+            <label
+              for="inputPlayerName-name"
+              class="inputPlayerName-label"
+              data-i18n="add_name"
+            >
+              Введите ваше имя
+            </label>
+            <input
+              type="text"
+              class="inputPlayerName-input"
+              id="inputPlayerName-name"
+              name="inputPlayerName_name"
+              maxlength="12"
+              required
+            />
+            <div class="page-buttons-container">
+              <button type="submit" class="page-btn" data-i18n="add_name_btn">
+                Начать игру
+              </button>
+              <button
+                type="button"
+                class="page-btn"
+                id="skip-inputPlayerName-name"
+                data-i18n="add_name_skip"
+              >
+                Пропустить
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

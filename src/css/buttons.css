@@ -1,0 +1,42 @@
+:root {
+  /* pbc - page-buttons-container */
+  --min-gap-pbc: 5px;
+  --average-gap-pbc: min(2vh, 2vw);
+  --max-gap-pbc: 3vw;
+
+  --gap-page-buttons-container: clamp(
+    var(--min-gap-pbc),
+    var(--average-gap-pbc),
+    var(--max-gap-pbc)
+  );
+  --padding-page-btn: var(--gap-page-buttons-container);
+
+  /* pbtn - page-btn */
+  --min-font-size-pbtn: 0.5rem;
+  --average-font-size-pbtn: min(5vh, 5vw);
+  --max-font-size-pbtn: 6vw;
+
+  --font-size-page-btn: clamp(
+    var(--min-font-size-pbtn),
+    var(--average-font-size-pbtn),
+    var(--max-font-size-pbtn)
+  );
+  --border-radius-pbtn: calc(var(--gap-page-buttons-container) / 2)
+}
+
+.page-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-page-buttons-container);
+}
+
+.page-btn {
+  cursor: pointer;
+  color: black;
+  background-color: yellow;
+  padding: var(--padding-page-btn);
+  border: 1px solid black;
+  border-radius: var(--border-radius-pbtn);
+  font-size: var(--font-size-page-btn);
+}
