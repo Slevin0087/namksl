@@ -11,7 +11,7 @@
   );
   --padding-page-btn: var(--gap-page-buttons-container);
 
-  /* pbtn - page-btn */
+  /* pbtn - page-btn, bgc - background-color */
   --min-font-size-pbtn: 0.5rem;
   --average-font-size-pbtn: min(5vh, 5vw);
   --max-font-size-pbtn: 6vw;
@@ -22,6 +22,9 @@
     var(--max-font-size-pbtn)
   );
   --border-radius-pbtn: calc(var(--gap-page-buttons-container) / 2);
+
+  --hover-pbtn-bgc: green;
+  --active-pbtn-bgc: red;
 }
 
 button {
@@ -29,6 +32,7 @@ button {
   -webkit-tap-highlight-color: transparent; /* Убирает синюю подсветку */
   text-emphasis-color: black; /* Для Safari */
   -webkit-text-fill-color: black; /* Для старых версий */
+  -webkit-appearance: none;
   appearance: none; /* Отключает системные стили */
 }
 
@@ -39,12 +43,29 @@ button {
   gap: var(--gap-page-buttons-container);
 }
 
-.page-btn,
-.page-btn[type="submit"] {
+.page-btn {
   cursor: pointer;
   background-color: yellow;
   padding: var(--padding-page-btn);
   border: 1px solid black;
   border-radius: var(--border-radius-pbtn);
   font-size: var(--font-size-page-btn);
+}
+
+@media (hover: hover) {
+  .page-btn:hover,
+  .page-btn:focus {
+    background-color: var(--hover-pbtn-bgc);
+  }
+  .page-btn:active {
+    background-color: var(--active-pbtn-bgc);
+    cursor: none !important;
+    touch-action: none;
+  }
+}
+
+@media (hover: none) {
+  .page-btn:active {
+    background-color: var(--active-pbtn-bgc);
+  }
 }
