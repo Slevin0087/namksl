@@ -1,4 +1,6 @@
-export default class InputPlayerName {
+///////////// IPN - InputPlayerName ////////////////////////
+
+export default class IPNPage {
   constructor() {
     this.elements = {
       form: document.getElementById("inputPlayerName-form"),

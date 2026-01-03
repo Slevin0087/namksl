@@ -1,19 +1,26 @@
 import { ACTIONS_TYPES } from "../Configs/ActionsConfigs.js";
-import { InputPlayerName } from "../Stats/InputPlayerName.js";
+import { TranslationStats } from "../Stats/TranslationStats.js";
+import { IPNStats } from "../Stats/IPNStats.js";
 import { UIStats } from "../Stats/UIStats.js";
+import { GameStats } from "../Stats/GameStats.js";
+import { CONTAINERS_NAMES } from "../Configs/ContainersNames.js";
+import { ScoresStats } from "../Stats/ScoresStats.js";
 
 export default class StatsManager {
-  constructor() {
+  constructor(container) {
+    this.container = container;
+    this.localStorage = this.container.get(CONTAINERS_NAMES.LOCAL_STORAGE);
     this.subscriptions = [];
+
+    this.init();
   }
 
-  init() {}
-
-  initStats() {
-    this.stats = {
-      inputPlayerName: new InputPlayerName(),
-      ui: new UIStats(),
-    };
+  init() {
+    this.translation = new TranslationStats(this.localStorage);
+    this.scores = new ScoresStats(this.localStorage);
+    this.game = new GameStats();
+    this.inputPlayerName = new IPNStats(this.localStorage);
+    this.ui = new UIStats(this.localStorage);
   }
 
   dispatch(action) {

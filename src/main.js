@@ -1,4 +1,4 @@
-import App from "./App.js";
+import App from "./App";
 
 // Запуск приложения после загрузки DOM
 document.addEventListener("DOMContentLoaded", async () => {
