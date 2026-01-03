@@ -5,8 +5,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slevin0087/namksl.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Slevin0087/namksl/issues"
+  },
+  "homepage": "https://github.com/Slevin0087/namksl#readme",
   "description": ""
 }
